@@ -256,12 +256,12 @@
         <br>
         <br>
         For our purposes here, the important part is that unlike regular (or classical) computers, quantum computers use the effects of interference, a behavior only found in quantum physics, to get to a right answer in less steps. These computers are manipulating really delicate states which have lots of errors and may not get the right answer all the time, so we run an algorithm over and over to amplify the right answer. For example, a typical result from a quantum computer looks something like this.
-        <img class="writeup_image" src="Web_app/histogram1.png" alt="Image of data from a quantum computer displayed as a histogram">
+        <img class="writeup_image" src="web_app/histogram1.png" alt="Image of data from a quantum computer displayed as a histogram">
         Whatever the quantum computer was trying to compute, we can see that the right answer is that tall column in the middle. All those other little bars in our histogram are a result noise. Today's quantum computers aren't perfect, so there will be noise in our results, but in this case, our correct answer is still fairly clear. For the sake of creating a visualization, I think the noise is beautiful and adds to the final effect. Once quantum computers are fully fault tolerant, this visualization will be a lot more boring. For once, the noise is a good thing.
         <br>
         <br>
         So what is it calculating, and what is the answer? Let's add some more data to our histogram.
-        <img class="writeup_image" src="Web_app/histogram2.png" alt="Image of the probabilities of computational basis states">
+        <img class="writeup_image" src="web_app/histogram2.png" alt="Image of the probabilities of computational basis states">
         As you can see, each bar is labeled with a series of 0s and 1s. These are 7 bit binary strings, and our amplified answer is "1010001", which is binary for the letter "Q". This means that our quantum computer is amplifying the letter Q, the first letter of Qiskit, which is exactly what we want! (For those really paying attention, text to binary is often written as 8 bits, starting with a 0 or 0b, but more on that later in the FAQs).
         <br>
         <br>
@@ -282,9 +282,9 @@
    
        
         In the example above, the circuits were run on "ibmq-paris", which the qubit connectivity looks like the following:
-        <img class="writeup_image" src="Web_app/connectivity.png" alt='Qubit connnetivity diagram for the quantum backend "ibmq-paris"'>
+        <img class="writeup_image" src="web_app/connectivity.png" alt='Qubit connnetivity diagram for the quantum backend "ibmq-paris"'>
         When the circuit for "Q" was transpiled for this hardware, it looks like this:
-        <img class="writeup_image" src="Web_app/circuit1.png" alt='Transpiled circuit for the letter "Q"'>
+        <img class="writeup_image" src="web_app/circuit1.png" alt='Transpiled circuit for the letter "Q"'>
         However, when the circuit for "k" was run, it was transpiled to look like this:
         <img class="writeup_image" src="Web_app/circuit2.png" alt='Transpiled circuit for the letter "k"'>
         The second circuit is a fair bit longer (or as we say, has a greater depth), which makes it more difficult to maintain accuracy. The longer (in depth) a circuit is, the longer (in time) it takes to execute, which means more opportunity for noise to get into the system. Each letter looks a little different, so some letters will be less accurate than others.
