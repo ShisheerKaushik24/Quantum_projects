@@ -1,5 +1,3 @@
-# packages in environment at C:\Anaconda_py\envs\qiskitty:
-#
 # Name                    Version                   Build  Channel
 anyio                     3.6.2                    pypi_0    pypi
 appdirs                   1.4.4                    pypi_0    pypi
