@@ -39,9 +39,13 @@
              // $(".output_container").append('<img style="top:'+i*10+'px;" class="waveform" id="space" src="letters/space_canvas.png"/>')
           } else {
             // console.log(event.keyCode)
+            if (letter == letter.toUpperCase()){
+               // console.log("is Uppercase");
+               $(".output_container").append('<img style="top:'+(i*10 - 100)+ 'px;" class="img" id="'+letter+'" src="Qr_code/'+letter+'_canvas.png"/>');
+            }
             if (letter == letter.toLowerCase()){
-               // console.log("is lowecase");
-               $(".output_container").append('<img style="top:'+(i*10 - 100)+ 'px;" class="img" id="'+letter+'" src="Qr_code/'+letter+'.png"/>');
+               // console.log("is lowercase");
+               $(".output_container").append('<img style="top:'+(i*10 - 100)+ 'px;" class="waveform" id="'+letter+'" src="Qr_code/lower/'+letter+'_canvas.png"/>');
             }
             // $(".output_container").append('<img style="top:'+(i*10 - 100)+ 'px; left:20px;" class="waveform" id="'+key.charAt(i)+'" src="letters/'+key.charAt(i)+'_canvas.png"/>');
             // drawing = '<img style="top:'+(i*10) +'px; left:20px;" class="waveform" id="'+key.charAt(i)+'" src="letters/'+key.charAt(i)+'_canvas.png"/>';
@@ -228,7 +232,7 @@
         <br>
         <br>
         To honor that legacy, you can create a similar image by typing in the box below, but instead of using pulsar data, it uses data from a quantum computer.
-        <div class="caption">Image of Peter Saville's design for Joy Division's Unknown Pleasures album artwork.</div>
+        <div class="caption">Image of designed QR-code</div>
     </div>
     <div class="input_container">
       <div class="description">
@@ -281,7 +285,7 @@
         For one last example, here is a mock up on a shirt that reads "qiskit terra aqua aer ignis" without spaces.
    
        
-        In the example above, the circuits were run on "ibmq-paris", which the qubit connectivity looks like the following:
+        In the example above, the circuits were run on "ibmq-16_melbourne", which the qubit connectivity looks like the following:
         <img class="writeup_image" src="Quantum_projects/web_app/connectivity.png" alt='Qubit connnetivity diagram for the quantum backend "ibmq-paris"'>
         When the circuit for "Q" was transpiled for this hardware, it looks like this:
         <img class="writeup_image" src="web_app/circuit1.png" alt='Transpiled circuit for the letter "Q"'>
