@@ -1,67 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>QR Code Generator</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;600&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
-    <script type="text/javascript">
+
+<head>
+  <meta charset="utf-8">
+  <title>QR Code Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;600&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  <script type="text/javascript">
     var drawingText = "";
-    $( document ).ready(function() {
-        $('input[name="type_text"]').bind('keyup blur',function(){
-            var node = $(this);
-            node.val(node.val().replace(/[^a-zA-Z ]/g,'') ); //only lowercase letter
-        });
+    $(document).ready(function() {
+      $('input[name="type_text"]').bind('keyup blur', function() {
+        var node = $(this);
+        node.val(node.val().replace(/[^a-zA-Z ]/g, '')); //only lowercase letter
+      });
     });
 
-function generateQRCode() {
-  // Get input text
-  var inputText = $('input[name="type_text"]').val();
+    function generateQRCode() {
+      // Get input text
+      var inputText = $('input[name="type_text"]').val();
 
-  // Generate QR code image
-  var qr = new QRCode({
-    text: inputText,
-    width: 300,
-    height: 300,
-    colorDark: "#000000",
-    colorLight: "#ffffff",
-    correctLevel: QRCode.CorrectLevel.L
-  });
-  var qrImage = qr.toDataURL("image/png");
+      // Generate QR code image
+      var qr = new QRCode({
+        text: inputText,
+        width: 300,
+        height: 300,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.L
+      });
+      var qrImage = qr.toDataURL("image/png");
 
-  // Display QR code image on the page
-  $('#qr_code').attr('src', qrImage);
-}
-
-function flashNotSupported() {
-        $(".not_supported").show().delay(500).fadeOut()
+      // Display QR code image on the page
+      $('#qr_code_img').attr('src', qrImage);
     }
-</script>
 
- </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <form>
-            <div class="form-group">
-              <label for="type_text">Enter text to generate QR code:</label>
-              <input type="text" class="form-control" name="type_text" id="type_text" placeholder="Enter text">
-            </div>
-            <button type="button" class="btn btn-primary" onclick="generateQRCode()">Generate QR code</button>
-          </form>
-        </div>
-        <div class="col-md-6">
-          <img id="qr_code" src="">
-        </div>
-      </div>
-    </div>
-  </body>
-  
-    </script>
+    function flashNotSupported() {
+      $(".not_supported").show().delay(500).fadeOut()
+    }
+  </script>
+
     <style media="screen">
       html body {
         background-color: black;
@@ -217,36 +197,22 @@ function flashNotSupported() {
 
       }
 
-  </style>
-  </head>
-  <body>
-    <div class="header">
-      <h1>QR code Generator</h1>
-      <div class="writeup_copy top">
-        The QR code system was invented in 1994 by Masahiro Hara from the Japanese company Denso Wave.[3] The initial design was influenced by the black and white pieces on a Go board.[4] Its purpose was to track vehicles during manufacturing; it was designed to allow high-speed component scanning, known as <a href="https://en.wikipedia.org/wiki/QR_code#:~:text=The%20QR%20code%20system%20was,allow%20high%2Dspeed%20component%20scanning." target="
-        ">CP 1919</a>. The signal was significant for many reasons, including being thought to be an extraterrestrial beacon. But for me, the significance of the CP 1919 is its eventual use in the album artwork for Joy Division's <a href="https://blogs.scientificamerican.com/sa-visual/pop-culture-pulsar-the-science-behind-joy-division-s-unknown-pleasures-album-cover/" target="_blank">Unknown Pleasures</a>. It is one of the most beautiful and recognizable visual adaptations of scientific data.
-        <br>
-        <br>
-        To honor that legacy, you can create a similar image by typing in the box below, but instead of using pulsar data, it uses data from a quantum computer.
-        <div class="caption">Image of designed QR-code</div>
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>QR code Generator</h1>
+    <div class="writeup_copy top">
+      The QR code system was invented in 1994 by Masahiro Hara from the Japanese company Denso Wave.[3] The initial design was influenced by the black and white pieces on a Go board.[4] Its purpose was to track vehicles during manufacturing; it was designed to allow high-speed component scanning, known as <a href="https://en.wikipedia.org/wiki/QR_code#:~:text=The%20QR%20code%20system%20was,allow%20high%2Dspeed%20component%20scanning." target="
+      ">CP 1919</a>. The signal was significant for many reasons, including being thought to be an extraterrestrial beacon. But for me, the significance of the CP 1919 is its eventual use in the album artwork for Joy Division's <a href="https://blogs.scientificamerican.com/sa-visual/pop-culture-pulsar-the-science-behind-joy-division-s-unknown-pleasures-album-cover/" target="_blank">Unknown Pleasures</a>. It is one of the most beautiful and recognizable visual adaptations of scientific data.
+      <br>
+      <br>
+      To honor that legacy, you can create a similar image by typing in the box below, but instead of using pulsar data, it uses data from a quantum computer.
+      <div class="caption">Image of designed QR-code</div>
     </div>
     <div class="caption">Image of designed QR-code</div>
-</div>
-<div class="input_container">
-  <div class="description">
-    <h2>Type any text (limited to letters)</h2>
   </div>
-  <input id="input" type="text" name="type_text">
-  <button type="button" name="button" onclick="generateQRCode()">Generate</button>
-  <div class="not_supported">
-    Character not supported
-  </div>
-</div>
-<div class="output_container">
-  <!-- All the goodies go here -->
-  <canvas id="canvas"></canvas>
-</div>
-
+  
 <script src="https://cdn.jsdelivr.net/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
   function generateQRCode() {
@@ -263,6 +229,21 @@ function flashNotSupported() {
   }
 </script>
 
+  <div class="input_container">
+    <div class="description">
+      <h2>Type any text (limited to letters)</h2>
+    </div>
+    <input id="input" type="text" name="type_text">
+    <button type="button" name="button" onclick="generateQRCode()">Generate</button>
+    <div class="not_supported">
+      Character not supported
+    </div>
+  </div>
+
+<div class="output_container">
+  <!-- All the goodies go here -->
+  <canvas id="canvas"></canvas>
+</div>
     <div class="project_writeup">
       <h1>Project Summary</h1>
       <div class="writeup_copy">
