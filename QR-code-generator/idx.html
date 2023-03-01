@@ -7,86 +7,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;600&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
     <script type="text/javascript">
     var drawingText = "";
     $( document ).ready(function() {
         $('input[name="type_text"]').bind('keyup blur',function(){
             var node = $(this);
-            node.val(node.val().replace(/[^a-zA-Z ]/g,'') ); //only lowercase letters
-            // node.val(node.val().replace(/[^a-zA-Z ]/g,'') ); //include uppercase letters
-
-            if (event.keyCode == 32 || (event.keyCode >= 65 && event.keyCode <= 90)) {
-              // populateText($(this).val());
-              drawingText = $(this).val()
-            } else if (event.keyCode == 8) { //backspace
-              // populateText($(this).val());
-              drawingText = $(this).val()
-              // console.log("drawing text is " + drawingText);
-            } else {
-              // flashNotSupported();
-            }
+            node.val(node.val().replace(/[^a-zA-Z ]/g,'') ); //only lowercase letter
         });
     });
 
-    var drawing;
+function generateQRCode() {
+  // Get input text
+  var inputText = $('input[name="type_text"]').val();
 
-function populateText(text){
-  $(".output_container").empty();
-  for (var i = 0; i < text.length; i++) {
-    var letter = text.charAt(i);
-      if (text.charAt(i) == " ") {
-        //commenting out to omit space character waveform. it looks crazy...
-         // $(".output_container").append('<img style="top:'+i*10+'px;" class="waveform" id="space" src="letters/space_canvas.png"/>')
-      } else {
-        // console.log(event.keyCode)
-        if (letter == letter.toUpperCase()){
-           // console.log("is Uppercase");
-           // Generate QR code image
-           var qr = new QRCode({
-             text: letter,
-             width: 100,
-             height: 100,
-             colorDark: "#000000",
-             colorLight: "#ffffff",
-             correctLevel: QRCode.CorrectLevel.L
-           });
-           var qrImage = qr.toDataURL("image/png");
-           // Append QR code image to output container
-           $(".output_container").append('<img style="top:'+(i*10 - 100)+ 'px;" class="img" id="'+letter+'" src="'+qrImage+'"/>');
-        }
-        if (letter == letter.toLowerCase()){
-           // console.log("is lowercase");
-           // Generate QR code image
-           var qr = new QRCode({
-             text: letter,
-             width: 100,
-             height: 100,
-             colorDark: "#000000",
-             colorLight: "#ffffff",
-             correctLevel: QRCode.CorrectLevel.L
-           });
-           var qrImage = qr.toDataURL("image/png");
-           // Append QR code image to output container
-           $(".output_container").append('<img style="top:'+(i*10 - 100)+ 'px;" class="waveform" id="'+letter+'" src="'+qrImage+'"/>');
-        }
-        // $(".output_container").append('<img style="top:'+(i*10 - 100)+ 'px; left:20px;" class="waveform" id="'+key.charAt(i)+'" src="letters/'+key.charAt(i)+'_canvas.png"/>');
-        // drawing = '<img style="top:'+(i*10) +'px; left:20px;" class="waveform" id="'+key.charAt(i)+'" src="letters/'+key.charAt(i)+'_canvas.png"/>';
-        $(".output_container").height(300 + (i*10));
-      }
-  }
+  // Generate QR code image
+  var qr = new QRCode({
+    text: inputText,
+    width: 300,
+    height: 300,
+    colorDark: "#000000",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.L
+  });
+  var qrImage = qr.toDataURL("image/png");
+
+  // Display QR code image on the page
+  $('#qr_code').attr('src', qrImage);
 }
 
-function generateDrawing() {
-  // console.log("at least I got her asdfasdfe");
-  var textToDraw = $("#input").val();
-  populateText(textToDraw);
-  $(".output_container").append("<div class='typed_text'>"+textToDraw+"</div>");
-}
-
-    function flashNotSupported() {
+function flashNotSupported() {
         $(".not_supported").show().delay(500).fadeOut()
     }
+</script>
 
+ </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form>
+            <div class="form-group">
+              <label for="type_text">Enter text to generate QR code:</label>
+              <input type="text" class="form-control" name="type_text" id="type_text" placeholder="Enter text">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="generateQRCode()">Generate QR code</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <img id="qr_code" src="">
+        </div>
+      </div>
+    </div>
+  </body>
+  
     </script>
     <style media="screen">
       html body {
