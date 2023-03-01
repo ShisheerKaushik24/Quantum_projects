@@ -230,19 +230,39 @@ function flashNotSupported() {
         To honor that legacy, you can create a similar image by typing in the box below, but instead of using pulsar data, it uses data from a quantum computer.
         <div class="caption">Image of designed QR-code</div>
     </div>
-    <div class="input_container">
-      <div class="description">
-        <h2>Type any text (limited to letters)</h2>
-      </div>
-      <input id="input" type="text" name="type_text">
-      <button type="button" name="button" onclick="generateDrawing()">Generate</button>
-      <div class="not_supported">
-        Character not supported
-      </div>
-    </div>
-    <div class="output_container">
-      <!-- All the goodies go here -->
-    </div>
+    <div class="caption">Image of designed QR-code</div>
+</div>
+<div class="input_container">
+  <div class="description">
+    <h2>Type any text (limited to letters)</h2>
+  </div>
+  <input id="input" type="text" name="type_text">
+  <button type="button" name="button" onclick="generateQRCode()">Generate</button>
+  <div class="not_supported">
+    Character not supported
+  </div>
+</div>
+<div class="output_container">
+  <!-- All the goodies go here -->
+  <canvas id="canvas"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+  function generateQRCode() {
+    var text = document.getElementById("input").value;
+    var canvas = document.getElementById("canvas");
+    var qr = new QRCode(canvas, {
+      text: text,
+      width: 400,
+      height: 400,
+      colorDark : "#000000",
+      colorLight : "#ffffff",
+      correctLevel : QRCode.CorrectLevel.H
+    });
+  }
+</script>
+
     <div class="project_writeup">
       <h1>Project Summary</h1>
       <div class="writeup_copy">
