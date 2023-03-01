@@ -10,39 +10,32 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
   <script type="text/javascript">
+    
     var drawingText = "";
     $(document).ready(function() {
       $('input[name="type_text"]').bind('keyup blur', function() {
         var node = $(this);
         node.val(node.val().replace(/[^a-zA-Z ]/g, '')); //only lowercase letter
       });
-    });
-
-    function generateQRCode() {
-      // Get input text
-      var inputText = $('input[name="type_text"]').val();
-
-      // Generate QR code image
-      var qr = new QRCode({
-        text: inputText,
-        width: 300,
-        height: 300,
-        colorDark: "#000000",
-        colorLight: "#ffffff",
-        correctLevel: QRCode.CorrectLevel.L
+      
+      $("#generate-btn").click(function() {
+        var text = $("#input").val();
+        if (text != "") {
+          drawingText = $('input[name="type_text"]').val(); // <-- Add this line
+          var qr = new QRCode(document.getElementById("qrcode"), {
+            text: text,
+            width: 256,
+            height: 256,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+          });
+        }
       });
-      var qrImage = qr.toDataURL("image/png");
-
-      // Display QR code image on the page
-      $('#qr_code_img').attr('src', qrImage);
-    }
-
-    function flashNotSupported() {
-      $(".not_supported").show().delay(500).fadeOut()
-    }
+    });
+    
   </script>
-
-    <style media="screen">
+  <style media="screen">
       html body {
         background-color: black;
         margin:0;
