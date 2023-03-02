@@ -1,5 +1,7 @@
 # Quantum Computing Projects
 
+![](asset/featured.png)
+
 ## Description:
 This repository contains a collection of my projects related to quantum computing. These projects cover various aspects of quantum computing, such as quantum algorithms, quantum programming, quantum simulation, and quantum hardware.
 
