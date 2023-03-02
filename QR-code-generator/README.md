@@ -1,28 +1,62 @@
-QR code Generator
+## Abstract
 
-The QR code system was invented in 1994 by Masahiro Hara from the Japanese company Denso Wave.[3] The initial design was influenced by the black and white pieces on a Go board.[4] Its purpose was to track vehicles during manufacturing; it was designed to allow high-speed component scanning, known as CP 1919. The signal was significant for many reasons, including being thought to be an extraterrestrial beacon. But for me, the significance of the CP 1919 is its eventual use in the album artwork for Joy Division's Unknown Pleasures. It is one of the most beautiful and recognizable visual adaptations of scientific data.
+Nowadays we all use **QR code** for multiple purposes like making payments, sharing WiFi, etc. Have you ever wished to generate such QR code on your own ?, this project is for generating a QR code using `Qiskit` Sdk and `Python` programming language. 
 
-To honor that legacy, you can create a similar image by typing in the box below, but instead of using pulsar data, it uses data from a quantum computer.
+## Project Contribution
 
-<image src="./Captur.jpg">
+For our purposes here, the important part is that unlike regular (or classical) computers, quantum computers use the effects of interference, a behavior only found in quantum physics, to get to a right answer in less steps. These computers are manipulating really delicate states which have lots of errors and may not get the right answer all the time, so we run an algorithm over and over to amplify the right answer. For example, a typical result from a quantum computer looks something like this. This work is submitted to the [QC-Hack 2021](https://www.quantumcoalition.io/qc-hack-2021) organized by [QuantumCoalition](https://www.quantumcoalition.io/). During the hackathon, we had the opportunity to learn and implement ideas in the field of QML. It was a pleasure to be part of this hackathon, and as a team, we would like to thank all the speakers for their valuable presentations and the Xanadu team for organizing an amazing event. Thanks to [IBM Quantum](https://www.ibm.com/quantum) & [Google Quantum AI](https://quantumai.google/), we received credits to execute our code on real quantum hardware.
+## General Implementation 
 
-Project Summary 
+Sure, here's a step-by-step explanation of the code along with the packages used and their purpose:
 
-The above demo creates an image with a quantum computer. Even better, the image is a word written by a quantum computer. Each line shows the amplitude of the binary representation of a letter of as an output of the Bernstein-Vazirani algorithm. 
+1. The first package is `qrcode`, which is a Python library that generates QR codes. It allows you to create QR codes for a wide range of use cases, such as encoding URLs, text messages, phone numbers, and more.
 
-Didn't understand that sentence? That's okay. Let's break it down and get into some details.
+3. The third package used is `plot_histogram` from `qiskit.visualization`, which is a module in the qiskit library that provides tools for visualizing quantum circuits and their results.
 
-First, let's talk about how quantum computers work a little bit. I'm going to skip some of the fundamentals, as its been said many times by people much more knowledgeable than myself, like this video.
+4. The first line of the code imports the qiskit library, which is needed to define quantum registers and circuits, and to execute them on various backends.
 
-For our purposes here, the important part is that unlike regular (or classical) computers, quantum computers use the effects of interference, a behavior only found in quantum physics, to get to a right answer in less steps. These computers are manipulating really delicate states which have lots of errors and may not get the right answer all the time, so we run an algorithm over and over to amplify the right answer. For example, a typical result from a quantum computer looks something like this.
+5. The second line of the code imports qiskit again but gives it an alias of qk, which is a common shorthand used by many developers.
 
-<image src="./histogram1.png">
-  
-Whatever the quantum computer was trying to compute, we can see that the right answer is that tall column in the middle. All those other little bars in our histogram are a result noise. Today's quantum computers aren't perfect, so there will be noise in our results, but in this case, our correct answer is still fairly clear. For the sake of creating a visualization, I think the noise is beautiful and adds to the final effect. Once quantum computers are fully fault tolerant, this visualization will be a lot more boring. For once, the noise is a good thing.
+6. The third line of the code imports qrcode, which is used to generate a QR code for the encoded message.
 
-So what is it calculating, and what is the answer? Let's add some more data to our histogram.
+7. The fourth line of the code imports the plot_histogram function from qiskit.visualization, which is used to plot the histogram of the measurement outcomes.
 
-<image src="./histogram2.png">
-  
-As you can see, each bar is labeled with a series of 0s and 1s. These are 7 bit binary strings, and our amplified answer is "1010001", which is binary for the letter "Q". This means that our quantum computer is amplifying the letter Q, the first letter of Qiskit, which is exactly what we want! (For those really paying attention, text to binary is often written as 8 bits, starting with a 0 or 0b, but more on that later in the FAQs).
+8. The next line of code prompts the user to enter a message to encode and stores it in the variable message.
 
+![](asset/bern-vazi/message.png)
+
+9. The next line of code removes duplicate characters from the message by converting it to a set, sorting it, and then joining it back together as a string. This is done to ensure that the message is unique and has a consistent order.
+
+10. The next line of code converts the message to binary by using the format function to convert each character to its 8-bit ASCII code and then concatenating the results.
+
+11. The next block of code initializes the quantum circuit by creating a quantum register q with a size equal to the length of the binary message plus one, and a classical register c with a size equal to the length of the binary message. It then creates a quantum circuit qc with these registers.
+
+12. The next line of code applies a Hadamard gate `H gate` to all the qubits in the quantum circuit qc. This creates a *superposition* of all possible states for the qubits.
+
+![](asset/bern-vazi/circuit.png)
+
+13. The next block of code defines the oracle as a secret binary string, which is used to mark the state that we want to find. In this case, the secret binary string is the complement of the binary message, where each 0 is replaced with **1** and each 1 is replaced with **0**.
+
+14. The next block of code applies a `Z gate` to each qubit in the quantum circuit qc that corresponds to a **1** in the oracle. This flips the phase of the state `|x>` for each marked element, where `|x>` is the binary representation of the element.
+
+![](asset/bern-vazi/simulator.png)
+
+15. The final step is to apply the Hadamard gate to each qubit in the quantum circuit. This puts the qubits in a superposition of all possible states, which will allow us to measure all possible outcomes with equal probability.
+
+![](asset/bern-vazi/result.png)
+
+16. We add a measurement gate to each qubit in the quantum circuit. This collapses the superposition of states into a single classical bit.
+
+17. Finally, we run the quantum circuit on a quantum simulator using the Aer package from Qiskit.
+
+![](asset/bern-vazi/graph.png)
+
+The Aer package provides a range of simulators for running quantum circuits. In this case, we use the `qasm_simulator` backend, which simulates the behavior of a real quantum computer and returns the outcomes of the measurements in the form of a dictionary containing the counts of each possible result.
+
+The execute function takes the quantum circuit qc and the backend as inputs, and runs the circuit on the backend to obtain the results. The shots parameter specifies the number of times the circuit should be run to obtain statistics on the outcomes.
+
+The result variable contains the result of the simulation, which includes the counts of each possible outcome. The counts variable is then used to print the result of the algorithm, which is the binary representation of the marked element.
+
+The generated QR-code :
+
+![](asset/bern-vazi/qr_code.png)
