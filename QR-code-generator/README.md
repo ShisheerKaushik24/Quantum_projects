@@ -1,7 +1,7 @@
 ## Abstract
 Nowadays we all use **QR code** for multiple purposes like making payments, sharing WiFi, etc. Have you ever wished to generate such QR code on your own ?, this project is for generating a QR code using `Qiskit` Sdk and `Python` programming language. 
 
-More detailed exaplination can be found [here:](https://shisheerkaushik.netlify.app/)
+More detailed explaination can be found [here:](https://shisheerkaushik.netlify.app/)
 
 ## Project Contribution
 This project work was submitted to the [QC-Hack 2021](https://www.quantumcoalition.io/qc-hack-2021) organized by [QuantumCoalition](https://www.quantumcoalition.io/). During the hackathon, I had the opportunity to learn and implement ideas in the field of Quantum Algorithms. It was a pleasure to be part of this hackathon. Thanks to [IBM Quantum](https://www.ibm.com/quantum) & [Google Quantum AI](https://quantumai.google/), I received credits to execute our code on real quantum hardware.
