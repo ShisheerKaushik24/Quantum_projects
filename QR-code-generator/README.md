@@ -1,12 +1,12 @@
 ## Abstract
-
 Nowadays we all use **QR code** for multiple purposes like making payments, sharing WiFi, etc. Have you ever wished to generate such QR code on your own ?, this project is for generating a QR code using `Qiskit` Sdk and `Python` programming language. 
 
+More detailed exaplination can be found [here:](https://shisheerkaushik.netlify.app/)
+
 ## Project Contribution
+This project work was submitted to the [QC-Hack 2021](https://www.quantumcoalition.io/qc-hack-2021) organized by [QuantumCoalition](https://www.quantumcoalition.io/). During the hackathon, I had the opportunity to learn and implement ideas in the field of Quantum Algorithms. It was a pleasure to be part of this hackathon. Thanks to [IBM Quantum](https://www.ibm.com/quantum) & [Google Quantum AI](https://quantumai.google/), I received credits to execute our code on real quantum hardware.
 
-For our purposes here, the important part is that unlike regular (or classical) computers, quantum computers use the effects of interference, a behavior only found in quantum physics, to get to a right answer in less steps. These computers are manipulating really delicate states which have lots of errors and may not get the right answer all the time, so we run an algorithm over and over to amplify the right answer. For example, a typical result from a quantum computer looks something like this. This work is submitted to the [QC-Hack 2021](https://www.quantumcoalition.io/qc-hack-2021) organized by [QuantumCoalition](https://www.quantumcoalition.io/). During the hackathon, we had the opportunity to learn and implement ideas in the field of QML. It was a pleasure to be part of this hackathon, and as a team, we would like to thank all the speakers for their valuable presentations and the Xanadu team for organizing an amazing event. Thanks to [IBM Quantum](https://www.ibm.com/quantum) & [Google Quantum AI](https://quantumai.google/), we received credits to execute our code on real quantum hardware.
 ## General Implementation 
-
 Sure, here's a step-by-step explanation of the code along with the packages used and their purpose:
 
 1. The first package is `qrcode`, which is a Python library that generates QR codes. It allows you to create QR codes for a wide range of use cases, such as encoding URLs, text messages, phone numbers, and more.
@@ -15,11 +15,11 @@ Sure, here's a step-by-step explanation of the code along with the packages used
 
 4. The first line of the code imports the qiskit library, which is needed to define quantum registers and circuits, and to execute them on various backends.
 
-5. The second line of the code imports qiskit again but gives it an alias of qk, which is a common shorthand used by many developers.
+5. The second line of the code imports qiskit again but gives it an alias of `qk`, which is a common shorthand used by many developers.
 
 6. The third line of the code imports qrcode, which is used to generate a QR code for the encoded message.
 
-7. The fourth line of the code imports the plot_histogram function from qiskit.visualization, which is used to plot the histogram of the measurement outcomes.
+7. The fourth line of the code imports the `plot_histogram` function from `qiskit.visualization`, which is used to plot the histogram of the measurement outcomes.
 
 8. The next line of code prompts the user to enter a message to encode and stores it in the variable message.
 
@@ -27,27 +27,27 @@ Sure, here's a step-by-step explanation of the code along with the packages used
 
 9. The next line of code removes duplicate characters from the message by converting it to a set, sorting it, and then joining it back together as a string. This is done to ensure that the message is unique and has a consistent order.
 
-10. The next line of code converts the message to binary by using the format function to convert each character to its 8-bit ASCII code and then concatenating the results.
+10. The next line of code converts the message to binary by using the format function to convert each character to its 8-bit `ASCII` code and then concatenating the results.
 
 11. The next block of code initializes the quantum circuit by creating a quantum register q with a size equal to the length of the binary message plus one, and a classical register c with a size equal to the length of the binary message. It then creates a quantum circuit qc with these registers.
 
-12. The next line of code applies a Hadamard gate `H gate` to all the qubits in the quantum circuit qc. This creates a *superposition* of all possible states for the qubits.
+12. The next line of code applies a Hadamard gate `H gate` to all the qubits in the quantum circuit `qc`. This creates a *superposition* of all possible states for the qubits.
 
 ![](asset/bern-vazi/circuit.png)
 
 13. The next block of code defines the oracle as a secret binary string, which is used to mark the state that we want to find. In this case, the secret binary string is the complement of the binary message, where each 0 is replaced with **1** and each 1 is replaced with **0**.
 
-14. The next block of code applies a `Z gate` to each qubit in the quantum circuit qc that corresponds to a **1** in the oracle. This flips the phase of the state `|x>` for each marked element, where `|x>` is the binary representation of the element.
+14. The next block of code applies a `Z gate` to each qubit in the quantum circuit `qc` that corresponds to a **1** in the oracle. This flips the phase of the state `|x>` for each marked element, where `|x>` is the binary representation of the element.
 
 ![](asset/bern-vazi/simulator.png)
 
-15. The final step is to apply the Hadamard gate to each qubit in the quantum circuit. This puts the qubits in a superposition of all possible states, which will allow us to measure all possible outcomes with equal probability.
+15. The final step is to apply the Hadamard gate to each qubit in the quantum circuit. This puts the qubits in a **superposition** of all possible states, which will allow us to measure all possible outcomes with equal probability.
 
 ![](asset/bern-vazi/result.png)
 
 16. We add a measurement gate to each qubit in the quantum circuit. This collapses the superposition of states into a single classical bit.
 
-17. Finally, we run the quantum circuit on a quantum simulator using the Aer package from Qiskit.
+17. Finally, we run the quantum circuit on a quantum simulator using the `Aer` package from Qiskit.
 
 ![](asset/bern-vazi/graph.png)
 
