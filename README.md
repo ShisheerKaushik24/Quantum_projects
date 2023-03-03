@@ -59,15 +59,22 @@ Install pip first:
 ```bash
 conda install -yc conda-forge pip==22.1.2 && python3 -m pip install -U --upgrade pip
 ```
-Installing qiskit[all] including qiskit-nature:
+Installing qiskit[all] :
 ```bash
 python3 -m pip install -U qiskit[all]
 ```
-To check if qiskit-nature is installed, run `$ conda list qiskit` or `$ pip show qiskit-nature`. 
-  
-Manually installing qiskit-nature should return:
+Installing pennylane :
 ```bash
-python3 -m pip install -U qiskit[nature] >>> Requirement already satisfied
+python3 -m pip install -U pennylane --upgrade
+```
+PennyLane comes with high performance built-in simulators, such as `default.qubit`, `default.mixed`, and `lightning.qubit`. In addition, it supports additional quantum simulators and quantum hardware via an array of plugins. Visit the [plugins](https://pennylane.ai/plugins.html) page for details. As a instance, to use 'qiskit' :
+```bash
+python3 -m pip install -U pennylane-qiskit
+```
+
+Manually installing cirq :
+```bash
+python3 -m pip install -U cirq
 ```
 Final step, installing PySCF (no support for native Windows platform, see [issue #750](https://github.com/pyscf/pyscf/issues/750)):
 ```bash
