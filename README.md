@@ -84,7 +84,7 @@ python3 -m pip install -U qiskit-nature[pyscf]
   
 <br>
   
-Alternatively, one can install the required dependencies via the [package_list.txt](requirements.txt) file:
+Alternatively, one can install the required dependencies via the [package_list.txt](package_list.txt) file:
 ```bash
 conda create -yn quantumproj python==3.9.11 && conda activate quantumproj
 ```
