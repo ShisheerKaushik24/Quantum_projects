@@ -93,7 +93,7 @@ Contributions to the repository are always welcome! If you have any ideas for ne
 
 # License
 
-This work is licensed under a [Creative Commons Zero v1.0 Universal](LICENSE) license.
+This work is licensed under a [MIT License](LICENSE) license.
 
 <hr>
 
