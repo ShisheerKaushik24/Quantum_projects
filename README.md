@@ -71,7 +71,7 @@ PennyLane comes with high performance built-in simulators, such as `default.qubi
 ```bash
 python3 -m pip install -U pennylane-qiskit
 ```
-
+More details on installation are in  the [document](https://github.com/quantumlib/Cirq). 
 Manually installing cirq :
 ```bash
 python3 -m pip install -U cirq
