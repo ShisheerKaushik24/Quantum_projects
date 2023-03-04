@@ -7,7 +7,9 @@
 <div align="center">
   <a href="https://github.com/ShisheerKaushik24/Quantum_projects"><img src="https://github.com/ShisheerKaushik24/Quantum_projects/blob/master/asset/featured.png" height="300" width="550" /></a>
 </div>
+
 *<p align="center"><small>Source: IBM Quantum</small></p>*
+
 <!-- Title: -->
 <div align="center">
   <h1> <a href="https://github.com/ShisheerKaushik24/Quantum_projects"> Quantum Computing Projects </a></h1>
