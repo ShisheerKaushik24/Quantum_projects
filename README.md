@@ -1,5 +1,5 @@
 <!-- Badges: -->
-[![License](https://img.shields.io/github/license/ShisheerKaushik24/Quantum_projects.svg?logo=CreativeCommons&style=flat-square)](https://github.com/ShisheerKaushik24/Quantum_projects/blob/master/LICENSE.md)
+[![License](https://img.shields.io/github/ShisheerKaushik24/Quantum_projects.svg?logo=CreativeCommons&style=flat-square)](https://github.com/ShisheerKaushik24/Quantum_projects/blob/master/LICENSE)
 [![Contributions](https://img.shields.io/badge/contributions-welcome-orange?style=flat-square)](https://github.com/ShisheerKaushik24/Quantum_projects/pulls)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/ShisheerKaushik24/Quantum_projects/graphs/commit-activity)
 
