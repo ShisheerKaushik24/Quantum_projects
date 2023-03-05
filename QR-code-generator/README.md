@@ -72,3 +72,9 @@ The generated QR-code :
 <p align="center">
   <img src="asset/bern-vazi/qr_code.png" alt="qr_code" />
 </p>
+
+Verified the obtained *QR-code* with the Google_lens:
+
+<p align="center">
+  <img src="asset/validation/Google_lens_1.png" alt="Google_lens_1" />
+</p>
