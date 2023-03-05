@@ -76,5 +76,5 @@ The generated QR-code :
 Verified the obtained *QR-code* with the Google_lens:
 
 <p align="center">
-  <img src="asset/validation/Google_lens_1.png" alt="Google_lens_1" />
+  <img src="asset/validation/Google_lens_2.jpg" alt="Google_lens_1" height="440" />
 </p>
