@@ -41,7 +41,7 @@ As it is seen from the below graphs, the simulation done on `FakeWashingtonV2()`
 
 **First import Fake-Provider tool, via qiskit library**. 
 
-Import 'FakeWashingtonV2`:
+Import `FakeWashingtonV2`:
 ```bash
 from qiskit.providers.fake_provider import FakeWashingtonV2
 ```
