@@ -94,7 +94,7 @@ As it is seen in the graphs, the simulation done on `FakeWashingtonV2()` quantum
 </table>
 
 <table align="center">
-  <caption>Comparison results of `qasm_simulation` and `FakeWashingtonV2()` for BB92 prtotcol</caption>
+  <caption>Comparison results of `qasm_simulation` and `FakeWashingtonV2()` for BB92 protocol</caption>
   <tr>
     <td><img src="asset/sim-bb92.png" alt="On Simulator [qasm]" width="85%"></td>
     <td><img src="asset/h-bb92.png" alt="On real Quantum Computer [ibmq-bogota]" width="85%"></td>
@@ -102,7 +102,7 @@ As it is seen in the graphs, the simulation done on `FakeWashingtonV2()` quantum
 </table>
 
 <table align="center">
-  <caption>Comparison results of `qasm_simulation` and `FakeWashingtonV2()` for Ekert91 prtotcol</caption>
+  <caption>Comparison results of `qasm_simulation` and `FakeWashingtonV2()` for Ekert91 protocol</caption>
   <tr>
     <td><img src="asset/sim-bb92.png" alt="On Simulator [qasm]" width="85%"></td>
     <td><img src="asset/h-e91.png" alt="On real Quantum Computer [ibmq-bogota]" width="85%"></td>
