@@ -39,7 +39,7 @@ The evaluation was done using three different communication protocols, namely *B
 
 As it is seen from the below graphs, the simulation done on `FakeWashingtonV2()` quantum computer is comparatively different from the one done on simulation. It’s because Quantum computers are exceedingly difficult to engineer, build and program. As a result, they are crippled by errors in the form of noise, faults and loss of quantum coherence, which is crucial to their operation and yet falls apart before any nontrivial program has a chance to run to completion. 
 
-First import Fake-Provider tool, via qiskit library. 
+**First import Fake-Provider tool, via qiskit library**. 
 
 Import 'FakeWashingtonV2`:
 ```bash
