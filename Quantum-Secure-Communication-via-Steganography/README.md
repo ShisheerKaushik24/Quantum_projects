@@ -80,7 +80,7 @@ All the simulation was done qiskit sdk: [Secret key used: **bnmit**]
   <img src="asset/sim-bb92.png" alt="no of Qubits" />
 </p>
 
-The above graph selected is the output generated from the Quantum Simulator [ qasm_simulator]
+The above graph selected is the output generated from the Quantum Simulator `qasm_simulator`.
 
 ## Future Scopes and Improvements
 As it is seen in the graphs, the simulation done on `FakeWashingtonV2()` quantum computer is comparatively different from the one done on simulation. It’s because Quantum computers are exceedingly difficult to engineer, build and program. As a result, they are crippled by errors in the form of noise, faults and loss of quantum coherence, which is crucial to their operation and yet falls apart before any nontrivial program has a chance to run to completion. 
