@@ -40,11 +40,11 @@ Each project includes detailed documentation and instructions on how to run the 
 
 ## Packages Used
 
-- `Qiskit`: A quantum computing software development framework used to build and execute quantum circuits. Used in the Quantum Teleportation and Grover's Algorithm implementations. To install, run `pip install qiskit`.
+- `Qiskit`: A quantum computing software development framework used to build and execute quantum circuits. Used in the Quantum Teleportation and Grover's Algorithm implementations.
 
 - `NumPy`: A Python package for scientific computing that provides support for large, multi-dimensional arrays and matrices, as well as a large library of mathematical functions. Used in the Quantum Circuit Simulator project. To install, run `pip install numpy`.
 
-- `Pennylane`: An open-source software library for quantum machine learning, quantum computing, and optimization. Used in the Quantum Machine Learning project to demonstrate a quantum support vector machine. To install, run `pip install pennylane`.
+- `Pennylane`: An open-source software library for quantum machine learning, quantum computing, and optimization. Used in the Quantum Machine Learning project to demonstrate a quantum support vector machine.
 
 ## Getting Started:
 To get started with these projects, simply clone or download the repository to your local machine. Each project has its own folder containing the necessary code and instructions on how to run it. Some projects may require installation of additional packages, such as Qiskit or Pennylane, which can be easily installed using pip.
