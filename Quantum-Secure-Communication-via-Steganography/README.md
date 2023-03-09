@@ -48,11 +48,11 @@ Here, you can also view the generated circuit.
 
 Above is the transpilated circuit generated with respect to the secret key entered, using the special gates during Quantum Simulation  
 
+3. The below fig. shows the randomly generated key by Alice and Bob.
+  
 <p align="center">
-  <img src="asset/sim-bb92.png" alt="no of Qubits" />
+  <img src="asset/key.png" alt="no of Qubits" />
 </p>
-
-3. This graph shows the output generated with respect the secret key entered
 
 4. Upload a sentence where you wish to hide your message and press enter. NOTE: Enter only small words [i.e family,hindrance,lanquage, etc ]
 
