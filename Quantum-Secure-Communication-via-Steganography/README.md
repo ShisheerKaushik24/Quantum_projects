@@ -45,7 +45,10 @@ Import `FakeWashingtonV2`:
 ```bash
 from qiskit.providers.fake_provider import FakeWashingtonV2
 ```
-
+Alternatively, one can install the required dependencies via the [requirements.txt](requirements.txt) file:
+```bash
+python3 -m pip install --user --upgrade pip && python3 -m pip install -r requirements.txt
+```
 # License
 
 This work is licensed under a [MIT License](LICENSE) license.
