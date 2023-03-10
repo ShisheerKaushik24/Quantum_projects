@@ -8,7 +8,7 @@
 ## Abstract
 The idea is to encode the sender's text`(secret message)` using the concept of interference. The secret message is encoded based on the cover file`(a text sentence in this case)`. A Demo video of interactive working implementation is available here: [Demo](https://drive.google.com/file/d/1RHY_QOV1cPRRPEe5KYRz-5Mahdmc7Ia7/view?usp=sharing). 
 
-More detailed explaination can be found [here:](https://shisheerkaushik.netlify.app/project/undergradute-thesis/). 
+More detailed explaination can be found [here:](https://shisheerkaushik.netlify.app/project/undergradute-thesis/)
 
 ## Future Scopes and Improvements
 The evaluation was done using three different communication protocols, namely *BB84*, *BBM92*, and *Ekert91*, to evaluate the performance of the system. I compared the relative results obtained using each protocol to obtain more precise and accurate results. Additionally, I utilized a real quantum simulator named `FakeWashingtonV2()` to simulate the behavior of a real quantum computer. This simulator was chosen because it is a widely used open-source quantum simulator that can accurately simulate the behavior of a real quantum computer. By using this simulator, I was able to test the system's performance under realistic conditions and compare it with the theoretical predictions obtained through simulations.
