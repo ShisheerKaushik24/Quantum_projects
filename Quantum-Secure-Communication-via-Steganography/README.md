@@ -14,7 +14,7 @@ More detailed explaination can be found [here:](https://shisheerkaushik.netlify.
 The evaluation was done using three different communication protocols, namely *BB84*, *BBM92*, and *Ekert91*, to evaluate the performance of the system. I compared the relative results obtained using each protocol to obtain more precise and accurate results. Additionally, I utilized a real quantum simulator named `FakeWashingtonV2()` to simulate the behavior of a real quantum computer. This simulator was chosen because it is a widely used open-source quantum simulator that can accurately simulate the behavior of a real quantum computer. By using this simulator, I was able to test the system's performance under realistic conditions and compare it with the theoretical predictions obtained through simulations.
   
 <table align="center">
-  <caption>Comparison results of `qasm_simulation` and `FakeWashingtonV2()` for BB84 prtotcol</caption>
+  <caption>Comparison results of `qasm_simulation` and `FakeWashingtonV2()` for BB84 protocol</caption>
   <tr>
     <td><img src="asset/sim-bb92.png" alt="On Simulator [qasm]" width="85%"></td>
     <td><img src="asset/h-bb84.png" alt="On real Quantum Computer [ibmq-bogota]" width="85%"></td>
