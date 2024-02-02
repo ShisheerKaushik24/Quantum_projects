@@ -1,0 +1,7 @@
+cplex==22.1.0.0
+matplotlib==3.6.2
+numpy==1.23.5
+qiskit==0.41.0
+qiskit_ibm_runtime==0.8.0
+qiskit_optimization==0.5.0
+qiskit_terra==0.22.3
