@@ -30,14 +30,23 @@ This repository contains a collection of my projects related to quantum computin
 ## List of Projects:</br>
 The repository contains the following projects:</br>
 
-1. [Android Malware Detection using VQC:](./android-malware-detection-using-vqc) 
-   - Description: A Variational Quatum Classifier Model based project.
-
-2. [Quantum QR-Code Generator](./QR-code-generator) 
+1. [Quantum QR-Code Generator](./QR-code-generator) 
    - Description: This project is based on Bernstein Vazirani Algorithm.
 
-3. [Benchmarking and Solving Vehicle routing problem on various QPU's:](./Vehicle%20routing%20problem) 
-   - Description: This project uses hybrid algorithms such as quantum approximate optimization algorithm and quadratic unconstrained binary optimization..
+2. [Benchmarking and Solving Vehicle routing problem on various QPU's:](./Vehicle%20routing%20problem) 
+   - Description: This project uses hybrid algorithms such as quantum approximate optimization algorithm and quadratic unconstrained binary optimization.
+
+3. [Quantum Optimization of Protein Folding Landscapes: Exploring Minimum Energy Conformations](./Quantum%20Optimization%20of%20Protein%20Folding%20Landscapes) 
+   - Description: This project uses hybrid algorithms such as quantum approximate optimization algorithm and variational quantum eigensolver.
+  
+4. [Automated Medical Image Diagnostics using QML](./Automated%20Medical%20Image%20Diagnostics%20using%20QML)
+   - Description: This project uses Quantum Inspired CNN with reversed MERA model.
+  
+5. [Quantum-Secure-Communication-via-Steganography:](./Quantum-Secure-Communication-via-Steganography)
+   - Description: This project uses BB84, BBM92, and Ekert91,  communication protocols.
+
+6. [Android Malware Detection using VQC:](./android-malware-detection-using-vqc) 
+   - Description: A Variational Quatum Classifier Model based project.
    
 
 Each project includes detailed documentation and instructions on how to run the code. The repository is constantly updated with new projects as I explore more topics in quantum computing.
