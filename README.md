@@ -45,6 +45,8 @@ Each project includes detailed documentation and instructions on how to run the 
 - `NumPy`: A Python package for scientific computing that provides support for large, multi-dimensional arrays and matrices, as well as a large library of mathematical functions. Used in the Quantum Circuit Simulator project. To install, run `pip install numpy`.
 
 - `Pennylane`: An open-source software library for quantum machine learning, quantum computing, and optimization. Used in the Quantum Machine Learning project to demonstrate a quantum support vector machine.
+  
+- `Dwave Ocean SDK`: It is a suite of open source Python tools on the D-Wave GitHub repository for solving hard problems with quantum computers.
 
 ## Getting Started:
 To get started with these projects, simply clone or download the repository to your local machine. Each project has its own folder containing the necessary code and instructions on how to run it. Some projects may require installation of additional packages, such as Qiskit or Pennylane, which can be easily installed using pip.
