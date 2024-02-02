@@ -36,7 +36,7 @@ The repository contains the following projects:</br>
 2. [Quantum QR-Code Generator](./QR-code-generator) 
    - Description: This project is based on Bernstein Vazirani Algorithm.
 
-3. [Benchmarking and Solving Vehicle routing problem on various QPU's:](./Vehicle-routing-problem) 
+3. [Benchmarking and Solving Vehicle routing problem on various QPU's:](./Vehicle%20routing%20problem) 
    - Description: This project uses hybrid algorithms such as quantum approximate optimization algorithm and quadratic unconstrained binary optimization..
    
 
