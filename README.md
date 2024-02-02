@@ -27,14 +27,18 @@
 ## Description:
 This repository contains a collection of my projects related to quantum computing. These projects cover various aspects of quantum computing, such as quantum algorithms, quantum programming, quantum simulation, and quantum hardware.
 
-## Contents:</br>
+## List of Projects:</br>
 The repository contains the following projects:</br>
 
-**[Quantum Communication](https://uwaterloo.ca/institute-for-quantum-computing/quantum-101/quantum-information-science-and-technology/quantum-communication)**: A Python implementation of the quantum teleportation algorithm using Qiskit.</br>
-**[Quantum Algorithm](https://www.quantum-inspire.com/kbase/what-is-a-quantum-algorithm/)**: A Python implementation of the Grover's search algorithm using Qiskit.</br>
-**[Quantum Circuit Simulator](https://uwaterloo.ca/institute-for-quantum-computing/quantum-101/quantum-information-science-and-technology/quantum-simulation)**: A simple quantum circuit simulator built using Python and NumPy.</br>
-**[Quantum Error Correction](https://q-ctrl.com/topics/what-is-quantum-error-correction)**: An introduction to quantum error correction codes and their implementation using Qiskit.</br>
-**[Quantum Machine Learning](https://pennylane.ai/qml/whatisqml.html)**: An overview of quantum machine learning and its applications.</br>
+1. [Android Malware Detection using VQC:](./android-malware-detection-using-vqc) 
+   - Description: A Variational Quatum Classifier Model based project.
+
+2. [Quantum QR-Code Generator](./QR-code-generator) 
+   - Description: This project is based on Bernstein Vazirani Algorithm.
+
+3. [Benchmarking and Solving Vehicle routing problem on various QPU's:](./Vehicle-routing-problem) 
+   - Description: This project uses hybrid algorithms such as quantum approximate optimization algorithm and quadratic unconstrained binary optimization..
+   
 
 Each project includes detailed documentation and instructions on how to run the code. The repository is constantly updated with new projects as I explore more topics in quantum computing.
 
