@@ -113,8 +113,9 @@ python3 -m pip install --user --upgrade pip && python3 -m pip install -r require
 ```
 
 ## Contributions:
-Contributions to the repository are always welcome! If you have any ideas for new projects or would like to contribute to an existing one, please feel free to open a pull request.
-
+- Contributions to the repository are always welcome! If you have any ideas for new projects or would like to contribute to an existing one.
+- Please refer to [CONTRIBUTE.md](./CONTRIBUTE.md) for details. :heart_eyes:
+  
 # License
 
 This work is licensed under a [MIT License](LICENSE) license.
